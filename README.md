@@ -46,7 +46,7 @@ class SomeClass:
 ```
 
 # Introduction
-To specify a class property in Python 3, one of the [two methods](https://docs.python.org/3/library/functions.html#property) is often used:
+To specify a class property in Python 3, one of the following [two methods](https://docs.python.org/3/library/functions.html#property) is often used:
 1. applying the `@property` decorator, or
 2. calling the built-in `property` class directly.
 
