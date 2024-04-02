@@ -1,5 +1,5 @@
 # Short Overview
-To write Python 3 properties while better adhering to the idea of ["Don't repeat yourself" (DRY)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself),
+In order to write Python 3 properties while better adhering to the idea of ["Don't repeat yourself" (DRY)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), with this package,
 ```python
 class SomeClass:
     def __init__(self): self._data = "Some data"
@@ -82,7 +82,9 @@ class ClassB:
 
     def data_deleter(self): del self._data
 
-    data = property(data_getter, data_setter, data_deleter,
+    data = property(data_getter,
+                    data_setter,
+                    data_deleter,
                     "Docstring for the `data` property.")
 ```
 However, a consequence of this method is that `data_getter`, `data_setter`, and `data_deleter` would remain methods of `ClassB`. If this is undesirable (and I expect that it would typically be since such getter, setter, and deleter methods would not be directly accessible when using the `@property` decorator to create a property), then the following line could be appended inside the class definition:
