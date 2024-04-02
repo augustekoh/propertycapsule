@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=58"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "propertycapsule"
+version = "0.0.1"
+authors = [
+        {name="Auguste L. W. Koh"},
+]
+description = "A package intended to allow for a more intuitive way of specifying class properties."
+readme = "README.md"
